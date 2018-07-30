@@ -34,17 +34,18 @@ class Enemy extends Characters {
   }
 }
 
+//Draw the enemy on the screen, required method for game
+//offset because the images are all 101 x 83 pixels
+//offset allows player to move block by block
 Enemy.prototype.render = function() {
-  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
 };
 
 //creats an instance of the Hero
 const player = new Player();
 
-
-
 //creates instances of the Enemy bug
-const bug1 = new Enemy(1,1);
+const bug1 = new Enemy(1,2);
 const allEnemies = [];
 allEnemies.push(bug1);
 
