@@ -7,7 +7,7 @@ class Characters {
   }
 
   update(dt) {
-    this.outOfBoundaryX = this.x > 5; 
+    this.outOfBoundaryX = this.x > 5;
     this.outOfBoundaryY = this.y < 1;
   }
 //offset because the images are all 101 x 83 pixels
@@ -25,6 +25,24 @@ class Player extends Characters {
     super();
     this.sprite += 'char-pink-girl.png';
   }
+
+  handleInput(input) {
+    switch (input) {
+      case 'left':
+        this.x = this.x>0 ? this.x-1 : this.x;
+        break;
+      case 'right':
+        this.x = this.x<4 ? this.x+1 : this.x;
+        break;
+      case 'up':
+        this.y = this.y>0 ? this.y-1 : this.y;
+        break;
+      case 'down':
+        this.y = this.y<5 ? this.y+1 : this.y;
+        break;
+    }
+  }
+
 }
 
 //Enemy class extends the Characters class from above
