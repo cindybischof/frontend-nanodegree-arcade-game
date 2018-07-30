@@ -154,7 +154,7 @@ var Engine = (function(global) {
         //    enemy.render();
         //});
 
-        //player.render();
+        player.render();
         //COMMENTED OUT TO USE LATER ON
     }
 
