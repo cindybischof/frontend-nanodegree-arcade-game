@@ -45,9 +45,15 @@ Enemy.prototype.render = function() {
 const player = new Player();
 
 //creates instances of the Enemy bug
-const bug1 = new Enemy(1,2);
 const allEnemies = [];
+const bug1 = new Enemy(1,2);
 allEnemies.push(bug1);
+
+const bug2 = new Enemy(4,1);
+allEnemies.push(bug2);
+
+const bug3 = new Enemy(0,3);
+allEnemies.push(bug3);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
