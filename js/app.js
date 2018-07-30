@@ -5,6 +5,11 @@ class Characters {
     this.x = 2;
     this.y = 5;
   }
+
+  update(dt) {
+    this.outOfBoundaryX = this.x > 5; 
+    this.outOfBoundaryY = this.y < 1;
+  }
 //offset because the images are all 101 x 83 pixels
 //offset allows player to move block by block
     render() {
@@ -31,6 +36,15 @@ class Enemy extends Characters {
     this.sprite += 'enemy-bug.png';
     this.x = x;
     this.y = y;
+  }
+  //moves enemy back to -1 if it goes out of bounds
+  update(dt){
+    super.update();
+    if(this.outOfBoundaryX){
+      this.x = -1;
+    } else {
+      this.x += dt;
+    }
   }
 }
 
