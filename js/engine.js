@@ -80,6 +80,7 @@ var Engine = (function(global) {
     function update(dt) {
         updateEntities(dt);
         checkCollisions();
+        checkWin();
     }
 
     //function iterates through all enemies
@@ -92,6 +93,13 @@ var Engine = (function(global) {
           player.x = 2;
         }
       });
+    }
+
+    //function checks if the player has reached the top row
+    function checkWin() {
+      if(player.y === 0) {
+        console.log('You win!');
+      }
     }
 
     /* This is called by the update function and loops through all of the
