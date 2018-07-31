@@ -79,7 +79,19 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+    }
+
+    //function iterates through all enemies
+    //uses true or false value from checkCollisions in app.js
+    //moves player back to staring position if there is a collision
+    function checkCollisions() {
+      allEnemies.forEach(enemy => {
+        if(enemy.checkCollisions(player) || player.checkCollisions(enemy)){
+          player.y = 5;
+          player.x = 2;
+        }
+      });
     }
 
     /* This is called by the update function and loops through all of the

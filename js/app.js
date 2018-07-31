@@ -13,8 +13,20 @@ class Characters {
   }
 //offset because the images are all 101 x 83 pixels
 //offset allows player to move block by block
-    render() {
-      ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
+  }
+  //check collisions function that takes in a player or Enemy
+  //if on the same x axis, checks to see if they're on the same y axis
+  //0.5 is the sensitivity that checks for collisions
+  checkCollisions(playerOrEnemy) {
+    if(this.y === playerOrEnemy.y) {
+      if(this.x >= playerOrEnemy.x - 0.4 && this.x <= playerOrEnemy.x + 0.4) {
+        return true;
+      }
+    } else {
+        return false;
+    }
   }
 }
 
