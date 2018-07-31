@@ -6,6 +6,7 @@ class Characters {
     this.y = 5;
   }
 
+//sets boudaries for the canvas
   update(dt) {
     this.outOfBoundaryX = this.x > 5;
     this.outOfBoundaryY = this.y < 1;
@@ -26,6 +27,8 @@ class Player extends Characters {
     this.sprite += 'char-pink-girl.png';
   }
 
+//event listener at bottom feeds into this handleInput switch statement
+//checks to see if player is in bounds and then moves accordingly
   handleInput(input) {
     switch (input) {
       case 'left':
@@ -42,26 +45,26 @@ class Player extends Characters {
         break;
     }
   }
-
 }
 
 //Enemy class extends the Characters class from above
 //Uses super keyword to get this.sprite, this.x & this.y from the Characteristics class we're inheriting from,
-//passes in parameters to get different starting points on the x & y axes than the player sprite
+//passes in parameters to get different starting points on the x & y axes and a speed parameter
 class Enemy extends Characters {
-  constructor(x,y) {
+  constructor(x,y,speed) {
     super();
     this.sprite += 'enemy-bug.png';
     this.x = x;
     this.y = y;
+    this.speed = speed;
   }
-  //moves enemy back to -1 if it goes out of bounds
+  //moves enemy back to -1 when it goes out of bounds
   update(dt){
     super.update();
     if(this.outOfBoundaryX){
       this.x = -1;
     } else {
-      this.x += dt;
+      this.x += this.speed * dt;
     }
   }
 }
@@ -77,14 +80,15 @@ Enemy.prototype.render = function() {
 const player = new Player();
 
 //creates instances of the Enemy bug
+//passes in different starting coordinates and speeds
 const allEnemies = [];
-const bug1 = new Enemy(1,2);
+const bug1 = new Enemy(1,2,2);
 allEnemies.push(bug1);
 
-const bug2 = new Enemy(4,1);
+const bug2 = new Enemy(4,1,2.5);
 allEnemies.push(bug2);
 
-const bug3 = new Enemy(0,3);
+const bug3 = new Enemy(0,3,1);
 allEnemies.push(bug3);
 
 // This listens for key presses and sends the keys to your
