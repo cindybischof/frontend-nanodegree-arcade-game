@@ -14,6 +14,6 @@ $ git clone https://github.com/cindybischof/frontend-nanodegree-arcade-game.git
 Now, you have a local copy of the game on your computer. Open the index.html file in your web browser to play the game.
 
 ## How to Play
-This is a new take on the classic "Frogger" game. Your objective is to get the sprite girl to the river without making contact with any ladybugs on her way! Use the up, down, left and right arrows on your keyboard to move the sprite girl accordingly. Upon reaching the river, you will receive an alert message letting you know that you have one the game! And then the game begins again for more fun!
+This is a new take on the classic "Frogger" game. Your objective is to get the sprite girl ![](images/char-pink-girl.png) to the river without making contact with any ladybugs on her way! Use the up, down, left and right arrows on your keyboard to move the sprite girl accordingly. Upon reaching the river, you will receive an alert message letting you know that you have one the game! And then the game begins again for more fun!
 
 Good luck!! :four_leaf_clover:
