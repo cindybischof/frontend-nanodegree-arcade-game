@@ -1,6 +1,19 @@
-frontend-nanodegree-arcade-game
-===============================
+# **:frog: Arcade Game Project :frog:**
+This is a new take on the classic "Frogger" game and was created by a woman learning to code as part of the Udacity Front-End Web Developer Nanodegree.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Installation] (#installation)
+* [How to Play] (#how)
+
+## Installation
+This web app will run on any browser. Clone or download the GitHub repository by clicking on the green button on the upper right. If you download the project, store the file on your computer where you wish and then open index.html file in your web browser to play the game. If you clone the project, make sure you are in the correct directory in the Terminal on your computer. Cloning the project will create a new directory and place the cloned Git repository in it. In your Terminal, type the following:
+
+$ git clone https://github.com/cindybischof/frontend-nanodegree-arcade-game.git
+
+Now, you have a local copy of the game on your computer. Open the index.html file in your web browser to play the game.
+
+## How to Play
+This is a new take on the classic "Frogger" game. Your objective is to get the sprite girl to the river without making contact with any ladybugs on her way! Use the up, down, left and right arrows on your keyboard to move the sprite girl accordingly. Upon reaching the river, you will receive an alert message letting you know that you have one the game! And then the game begins again for more fun!
+
+Good luck!! :four_leaf_clover:
