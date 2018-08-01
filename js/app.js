@@ -37,7 +37,16 @@ class Player extends Characters {
   constructor() {
     super();
     this.sprite += 'char-pink-girl.png';
+    this.moving = false;
   }
+
+//render running all the time
+//will clear this.moving from true to false after each move
+//allows player to actually reach the river before win alert pops up
+render() {
+  super.render();
+  player.moving = false;
+}
 
 //event listener at bottom feeds into this handleInput switch statement
 //checks to see if player is in bounds and then moves accordingly
@@ -56,6 +65,7 @@ class Player extends Characters {
         this.y = this.y<5 ? this.y+1 : this.y;
         break;
     }
+    player.moving = true;
   }
 }
 
