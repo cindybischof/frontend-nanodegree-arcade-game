@@ -98,7 +98,9 @@ var Engine = (function(global) {
     //function checks if the player has reached the top row
     function checkWin() {
       if(player.y === 0) {
-        console.log('You win!');
+        alert('You win!!');
+        player.y = 5;
+        player.x = 2;
       }
     }
 
